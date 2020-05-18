@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Eater&family=Londrina+Shadow&family=Orbitron&family=Peralta&family=Press+Start+2P&family=Unkempt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;900&display=swap");
 
 /* Style the accordion section */
 .accordion__section {
@@ -12,7 +12,7 @@
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #111;
-  color: #818181;
+  color: white;
   cursor: pointer;
   padding: 18px;
   display: flex;
@@ -28,6 +28,8 @@
   /* font-family: "Roboto", normal; */
   /* font-weight: 10; */
   /* font-size: 14px; */
+  font-family: "Exo", sans-serif;
+
   text-align: center;
 }
 
@@ -52,7 +54,7 @@
 
 /* Style the accordion content text */
 .accordion__text {
-  /* font-family: "Roboto", normal; */
+  font-family: "Exo", sans-serif;
   font-weight: 400;
   font-size: 14px;
   padding: 18px;

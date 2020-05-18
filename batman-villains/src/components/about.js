@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { logOut } from "../store/actions/actions";
 import Accordion from "../functionality/accordion";
-import logo from "../icons/home.jpg";
+import logo from "../icons/about.jpg";
 import "../App.css";
 
 function About(props) {
@@ -50,15 +50,18 @@ function About(props) {
         <br />
         <img width="50%" src={logo} />
         <div className="text-section">
-          <h3>What is this website?</h3>
+          <h3>Our Story</h3>
           <p className="about">
-            This App allows you to create a squad of villains to face-off The
-            Batman!
-            <br />
-            After you pick your villains you will get a percentage of how likely
-            they'll be
-            <br /> to defeat The Dark Knight! Follow the tabs to the left to get
-            started!
+            Inspired by all the crazy villains that have tormented Batman
+            throughout the years, <br /> (especially in the Arkham series) I was
+            inspired to make a website that lists them all off! <br /> I then
+            realized that an index of Batman villains obviously already exists
+            in a bunch
+            <br /> of other places online, so I have implemented the "Create a
+            Squad" feature
+            <br /> where the user can pick villains to assemble a squad that
+            shows the likelihood <br /> of them defeating Batman! Follow the
+            tabs to the left to get started!
           </p>
         </div>
         <br />{" "}
@@ -81,21 +84,7 @@ function About(props) {
               <a>
                 <b> Forrest Darabian </b>
               </a>
-              All Rights Reserved.
             </p>
-          </div>
-          <div>
-            Icons made by{" "}
-            <a
-              href="https://www.flaticon.com/authors/smalllikeart"
-              title="smalllikeart"
-            >
-              smalllikeart
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
           </div>
           <div class="left">
             <h4 class="something">Contact / Links</h4>
@@ -112,6 +101,8 @@ function About(props) {
               </a>
             </li>
           </div>
+          <br />
+          Batman is a property of Warner Bros & DC Comics.
         </div>
       </footer>{" "}
       <br />

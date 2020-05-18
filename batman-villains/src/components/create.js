@@ -6,7 +6,7 @@ import Accordion from "../functionality/accordion";
 import logo from "../icons/home.jpg";
 import "../App.css";
 
-function Home(props) {
+function Create(props) {
   const { touched, errors, logInUser, history, token } = props;
   return (
     <div className="home-container">
@@ -44,8 +44,10 @@ function Home(props) {
       </header>
       <div className="Home">
         <div className="text-section">
-          <h1 className="top-h1">Home</h1>
-          <h3>Welcome Home! Create an Account or Login Below!</h3>
+          <h1 className="top-h1">Create a Squad</h1>
+          <h3>
+            Lets make a Squad of Villains! Create an Account or Login Below!
+          </h3>
           {token ? (
             <div>
               <NavLink to="/create">
@@ -112,21 +114,7 @@ function Home(props) {
               <a>
                 <b> Forrest Darabian </b>
               </a>
-              All Rights Reserved.
             </p>
-          </div>
-          <div>
-            Icons made by{" "}
-            <a
-              href="https://www.flaticon.com/authors/smalllikeart"
-              title="smalllikeart"
-            >
-              smalllikeart
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
           </div>
           <div class="left">
             <h4 class="something">Contact / Links</h4>
@@ -143,6 +131,8 @@ function Home(props) {
               </a>
             </li>
           </div>
+          <br />
+          Batman is a property of Warner Bros & DC Comics.
         </div>
       </footer>{" "}
       <br />
@@ -159,4 +149,4 @@ const mapStateToProps = (state) => {
     logInUser: state.logInUser,
   };
 };
-export default Home;
+export default Create;
