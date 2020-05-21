@@ -1,0 +1,26 @@
+Backend
+
+
+Batman villain squads
+.GET request
+.GET ALL 
+see everyones data they've ever posted
+.GET BY ID
+get specific data
+
+.POST
+posting data
+registering
+logging in
+posting a squad of villains
+commenting on squad
+
+
+.PUT
+Editing a POST
+
+
+.DELETE
+Deleting data
+
+API call is the front end calling the Backend

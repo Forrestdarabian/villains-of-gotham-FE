@@ -54,7 +54,7 @@ function Create(props) {
                 <button className="home">Create Squad</button>
               </NavLink>
               <NavLink to="/posted-list">
-                <button className="home">Posted Lists</button>
+                <button className="home">Posted squads</button>
               </NavLink>
               <br />
               {/* <button
