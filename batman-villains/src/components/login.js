@@ -14,9 +14,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     password: "",
   });
 
-  // useEffect(() => {
-
-  // }, [history, token]);
+  // useEffect(() => {}, [history, token]);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });

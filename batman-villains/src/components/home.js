@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-// import { logOut } from "../store/actions/actions";
+import { logOut } from "../store/actions/actions";
 import Accordion from "../functionality/accordion";
 import logo from "../icons/home.jpg";
 import "../App.css";
@@ -51,11 +51,11 @@ function Home(props) {
               <NavLink to="/create">
                 <button className="home">Create Squad</button>
               </NavLink>
-              <NavLink to="/posted-list">
+              <NavLink to="/squads">
                 <button className="home">Posted squads</button>
               </NavLink>
               <br />
-              {/* <button
+              <button
                 className="home"
                 onClick={() => {
                   props.logOut();
@@ -63,7 +63,7 @@ function Home(props) {
                 }}
               >
                 Logout
-              </button> */}
+              </button>
             </div>
           ) : (
             <>

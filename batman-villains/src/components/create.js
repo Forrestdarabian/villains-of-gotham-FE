@@ -1,120 +1,220 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-// import { logOut } from "../store/actions/actions";
-import Accordion from "../functionality/accordion";
+import { logOut, addSquads } from "../store/actions/actions";
 import logo from "../icons/home.jpg";
 import "../App.css";
 
-function Create(props) {
-  const { touched, errors, logInUser, history, token } = props;
+const Create = ({
+  touched,
+  errors,
+  logInUser,
+  history,
+  token,
+  addSquads,
+  boss,
+  secondInCommand,
+  brute,
+  henchman,
+  thug,
+}) => {
+  if (!token) {
+    history.push(`/login/`);
+  }
+
+  const [squadItem, setSquadItem] = useState({
+    boss: "The Joker",
+    secondInCommand: "Harley Quinn",
+    brute: "Bane",
+    henchman: "Firefly",
+    thug: "Anarky",
+  });
+
+  // const [selectedCategory, setCategory] = useState("The Joker");
+
+  // const CategoryMapping = {
+  //   Movies: [
+  //     "Action",
+  //     "Drama",
+  //     "Horror",
+  //     "Romance",
+  //     "Sci-Fi",
+  //     "Animation",
+  //     "Thriller",
+  //   ],
+  //   Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
+  //   TV: ["Comedy", "Drama", "Cartoon"],
+  //   Games: ["90's", "2000's", "2010's"],
+  //   Animals: ["Land", "Sea", "Air"],
+  //   Holidays: ["Holidays"],
+  //   Consoles: ["SEGA", "Nintendo", "Playstation"],
+  // };
+
+  // const handleChanges = (e) => {
+  //   if (e.currentTarget.id == "category") {
+  //     setCategory(e.target.value);
+  //     let currentSquadItem = squadItem;
+  //     squadItem.category = e.target.value;
+  //     squadItem.subcategory = CategoryMapping[e.target.value][0];
+
+  //     setSquadItem();
+  //   }
+  //   setSquadItem({ ...squadItem, [e.target.name]: e.target.value });
+  // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(squadItem);
+    addSquads(squadItem);
+    history.push(`/squads`);
+    // document.getElementById("clear-input").reset();
+  };
+
   return (
     <div className="home-container">
-      <header className="Home-header">
-        <div id="mySidenav" class="sidenav">
-          <h1>Villains of Gotham</h1>
-          <NavLink className="a" to="/home">
-            Home
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/villains">
-            Villains
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/register">
-            Register
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/login">
-            Login
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/create">
-            Create
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/squads">
-            Squads
-          </NavLink>
-          <br />
-          <NavLink className="a" to="/about">
-            About
-          </NavLink>
-        </div>
-      </header>
+      <h1 className="top-h1">Total Top 5's</h1>
       <div className="Home">
-        <div className="text-section">
-          <h1 className="top-h1">Create a Squad</h1>
-          <h3>
-            Lets make a Squad of Villains! Create an Account or Login Below!
-          </h3>
-          {token ? (
-            <div>
-              <NavLink to="/create">
-                <button className="home">Create Squad</button>
-              </NavLink>
-              <NavLink to="/posted-list">
-                <button className="home">Posted squads</button>
-              </NavLink>
-              <br />
-              {/* <button
-                className="home"
-                onClick={() => {
-                  props.logOut();
-                  props.history.push(`/login/`);
-                }}
-              >
-                Logout
-              </button> */}
-            </div>
-          ) : (
-            <>
-              {" "}
-              <NavLink to="/register">
-                <button className="home">Create an Account</button>
-              </NavLink>
-              <NavLink to="/login">
-                <button className="home">Login</button>
-              </NavLink>
-              <br />
-            </>
-          )}
-        </div>
+        <form id="clear-input" onSubmit={(e) => handleSubmit(e)}>
+          <h1 className="top-h1">Create a Villain Squad</h1>
+          <h3>Users Will Be Able To See Your Top 5's</h3>
+          <div className="form-group">
+            <label>Pick a Boss: </label>
+            <select
+              className="form-control"
+              id="boss"
+              type="text"
+              name="boss"
+              placeholder="Pick a Boss"
+              value={boss}
+              // onChange={handleChanges}
+              required
+            >
+              {/* {Object.keys(CategoryMapping).map((item) => {
+                return <option value={item}> {item}</option>;
+              })} */}
+            </select>
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Pick a Second in Command: </label>
+            <select
+              className="form-control"
+              id="secondInCommand"
+              type="text"
+              name="secondInCommand"
+              placeholder="Choose a Second in Command"
+              value={secondInCommand}
+              // onChange={handleChanges}
+              required
+            >
+              {/* {CategoryMapping[selectedCategory].map((item) => {
+                return <option value={item}> {item}</option>;
+              })} */}
+            </select>
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Pick a Brute: </label>
+            <select
+              className="form-control"
+              id="brute"
+              type="text"
+              name="brute"
+              placeholder="Choose a Brute"
+              value={brute}
+              // onChange={handleChanges}
+              required
+            >
+              {/* {CategoryMapping[selectedCategory].map((item) => {
+                return <option value={item}> {item}</option>;
+              })} */}
+            </select>
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Pick a Henchman: </label>
+            <select
+              className="form-control"
+              id="henchman"
+              type="text"
+              name="henchman"
+              placeholder="Choose a Henchman"
+              value={henchman}
+              // onChange={handleChanges}
+              required
+            >
+              {/* {CategoryMapping[selectedCategory].map((item) => {
+                return <option value={item}> {item}</option>;
+              })} */}
+            </select>
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Pick a Thug: </label>
+            <select
+              className="form-control"
+              id="thug"
+              type="text"
+              name="thug"
+              placeholder="Choose a Thug"
+              value={thug}
+              // onChange={handleChanges}
+              required
+            >
+              {/* {CategoryMapping[selectedCategory].map((item) => {
+                return <option value={item}> {item}</option>;
+              })} */}
+            </select>
+          </div>
+
+          <br />
+          <button type="submit" className="home">
+            Submit
+          </button>
+          <br />
+          <br />
+        </form>
         <br />
-        <img width="50%" src={logo} />
-        <div className="text-section">
-          <h3>What is this website?</h3>
-          <p className="about">
-            This App allows you to create a squad of villains to face-off The
-            Batman!
-            <br />
-            After you pick your villains you will get a percentage of how likely
-            they'll be
-            <br /> to defeat The Dark Knight! Follow the tabs to the left to get
-            started!
-          </p>
+        <div className="second-nav-container">
+          <NavLink to="/home">
+            <button className="home">Home</button>
+          </NavLink>
         </div>
-        <br />{" "}
-        <Accordion
-          title="Meet The Creator"
-          content="
-          <h3>Forrest Darabian</h3>
-          <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>
-    "
-        />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <img src={logo} className="App-logo" alt="logo" />
+        <br />
+        <br />
         <br />
         <br />
       </div>
       <footer class="footer pt-80 pt-xs-60">
         <div class="footer-container">
-          <h1>Villains of Gotham</h1>
+          <h1>Total Top 5's</h1>
           <div class="copyright">
             <p>
               © 2020
               <a>
                 <b> Forrest Darabian </b>
               </a>
+              All Rights Reserved.
             </p>
+          </div>
+          <div>
+            Icons made by{" "}
+            <a
+              href="https://www.flaticon.com/authors/smalllikeart"
+              title="smalllikeart"
+            >
+              smalllikeart
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
           </div>
           <div class="left">
             <h4 class="something">Contact / Links</h4>
@@ -131,8 +231,6 @@ function Create(props) {
               </a>
             </li>
           </div>
-          <br />
-          Batman is a property of Warner Bros & DC Comics.
         </div>
       </footer>{" "}
       <br />
@@ -140,13 +238,13 @@ function Create(props) {
       <br />
     </div>
   );
-}
+};
 
 const mapStateToProps = (state) => {
-  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  console.log(`THIS IS MSTP FORM`, state);
   return {
+    state: state,
     token: state.token,
-    logInUser: state.logInUser,
   };
 };
-export default Create;
+export default connect(mapStateToProps, { addSquads })(Create);

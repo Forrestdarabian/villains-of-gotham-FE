@@ -103,7 +103,7 @@ export const ADDING_SQUAD = "ADDING_SQUAD";
 export const ADD_SQUAD_SUCCESS = "ADD_SQUAD_SUCCESS";
 export const ADD_SQUAD_FAILURE = "ADD_SQUAD_FAILURE";
 
-export const addsquads = (squadItems) => (dispatch) => {
+export const addSquads = (squadItems) => (dispatch) => {
   console.log(squadItems);
   dispatch({ type: ADDING_SQUAD });
   axiosWithAuth()
