@@ -12,7 +12,7 @@ const axiosWithAuth = () => {
     },
     baseURL: isTesting
       ? "http://localhost:5000/"
-      : "https://villains-of-gotham-BE.herokuapp.com/",
+      : "https://villains-of-gotham.herokuapp.com/",
   });
 };
 export default axiosWithAuth;

@@ -133,7 +133,7 @@ export const updateSquad = (updatedSquad, id) => (dispatch) => {
   dispatch({ type: EDIT_START });
   axiosWithAuth()
     .put(
-      `https://total-top-5s.herokuapp.com/api/users/squads/${id}`,
+      `https://villains-of-gotham.herokuapp.com/api/users/squads/${id}`,
       updatedSquad
     )
     .then((res) => {
@@ -153,7 +153,7 @@ export const DELETE_SQUAD_FAILURE = "DELETE_SQUAD_FAILURE";
 export const deleteSquad = (id) => (dispatch) => {
   dispatch({ type: DELETE_SQUAD_START });
   axiosWithAuth()
-    .delete(`https://total-top-5s.herokuapp.com/api/users/squads/${id}`)
+    .delete(`https://villains-of-gotham.herokuapp.com/api/users/squads/${id}`)
     .then((res) => {
       console.log(res.data.message);
       dispatch({ type: DELETE_SQUAD_SUCCESS, payload: id });
