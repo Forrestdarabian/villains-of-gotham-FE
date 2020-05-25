@@ -84,6 +84,7 @@ const Register = (props) => {
 
         <div className="form-group">
           <label>Full name: </label>
+          <br />
           <input
             type="text"
             className="form-control"
@@ -93,12 +94,14 @@ const Register = (props) => {
         <br />
         <div className="form-group">
           <label>Username: </label>
+          <br />
           <input type="text" className="form-control" placeholder=" Username" />
         </div>
         <br />
 
         <div className="form-group">
           <label>Password: </label>
+          <br />
           <input
             type="password"
             className="form-control"
@@ -108,7 +111,9 @@ const Register = (props) => {
         <br />
 
         <div className="form-group">
-          <label>Email Address: </label>
+          <label>Email: </label>
+
+          <br />
           <input
             type="email"
             className="form-control"

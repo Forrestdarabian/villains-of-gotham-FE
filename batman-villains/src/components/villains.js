@@ -5,6 +5,41 @@ import { connect } from "react-redux";
 import Accordion from "../functionality/accordion";
 import logo from "../icons/home.jpg";
 import "../App.css";
+import joker from "../icons/joker.jpg";
+import penguin from "../icons/penguin.jpg";
+import twoface from "../icons/twoface.png";
+import blackmask from "../icons/blackmask.jpg";
+import hugoStrange from "../icons/hugostrange.png";
+import ras from "../icons/ras.jpg";
+import mrFreeze from "../icons/mrfreeze.jpg";
+import riddler from "../icons/riddler.jpg";
+import poisonIvy from "../icons/poisonivy.png";
+import harleyQuinn from "../icons/harleyquinn.jpg";
+import scarecrow from "../icons/scarecrow.png";
+import deathstroke from "../icons/deathstroke.png";
+import catWoman from "../icons/catwoman.jpg";
+import calendarMan from "../icons/calendarman.jpg";
+import talia from "../icons/talia.png";
+import prometheus from "../icons/prometheus.jpg";
+import manBat from "../icons/manbat.jpg";
+import killerCroc from "../icons/killercroc.jpg";
+import solomon from "../icons/solomongrundy.png";
+import clayface from "../icons/clayface.jpg";
+import bane from "../icons/bane.jpg";
+import firefly from "../icons/firefly.jpg";
+import madHatter from "../icons/madhatter.png";
+import killerMoth from "../icons/killermoth.jpg";
+import ventriloquist from "../icons/scarface.png";
+import greatWhiteShark from "../icons/greatwhiteshark.jpg";
+import deadshot from "../icons/deadshot.jpg";
+import azrael from "../icons/azrael.png";
+import hush from "../icons/hush.png";
+import victor from "../icons/victorzsasz.png";
+import anarky from "../icons/anarky.jpg";
+import humptydumpty from "../icons/humptydumpty.jpg";
+import rat from "../icons/ratcatcher.jpg";
+import tweedle from "../icons/tweedle.jpg";
+import professorPyg from "../icons/professorpyg.jpg";
 
 function Villains(props) {
   const { touched, errors, logInUser, history, token } = props;
@@ -54,11 +89,21 @@ function Villains(props) {
         </div>
         <br />
         <h3>Bosses</h3>
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={joker}
+        />
         <Accordion
           title="The Joker"
           content="
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={penguin}
         />
         <Accordion
           title="The Penguin"
@@ -66,11 +111,21 @@ function Villains(props) {
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={twoface}
+        />
         <Accordion
           title="Two-Face"
           content="
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={blackmask}
         />
         <Accordion
           title="Black Mask"
@@ -78,17 +133,32 @@ function Villains(props) {
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={hugoStrange}
+        />
         <Accordion
           title="Hugo Strange"
           content="
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={ras}
+        />
         <Accordion
           title="Ra's al Ghul"
           content="
       <h3></h3>
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={mrFreeze}
         />
         <Accordion
           title="Mr. Freeze"
@@ -97,11 +167,21 @@ function Villains(props) {
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
         <h3>Second in Commands</h3>
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={riddler}
+        />
         <Accordion
           title="The Riddler"
           content="
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={poisonIvy}
         />
         <Accordion
           title="Poison Ivy"
@@ -109,11 +189,21 @@ function Villains(props) {
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={harleyQuinn}
+        />
         <Accordion
           title="Harley Quinn"
           content="
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={scarecrow}
         />
         <Accordion
           title="Scarecrow"
@@ -121,11 +211,21 @@ function Villains(props) {
       <h3></h3>
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={deathstroke}
+        />
         <Accordion
           title="Deathstroke"
           content="
     <h3></h3>
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={catWoman}
         />
         <Accordion
           title="Catwoman"
@@ -133,17 +233,32 @@ function Villains(props) {
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={calendarMan}
+        />
         <Accordion
           title="Calendar Man"
           content="
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={talia}
+        />
         <Accordion
           title="Talia al Ghul"
           content="
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={prometheus}
         />
         <Accordion
           title="Prometheus"
@@ -152,6 +267,11 @@ function Villains(props) {
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
         <h3>Brutes</h3>
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={manBat}
+        />
         <Accordion
           title="Man-Bat
           "
@@ -159,11 +279,21 @@ function Villains(props) {
     <h3></h3>
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={killerCroc}
+        />
         <Accordion
           title="Killer Croc"
           content="
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={solomon}
         />
         <Accordion
           title="Solomon Grundy"
@@ -171,11 +301,21 @@ function Villains(props) {
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={clayface}
+        />
         <Accordion
           title="Clayface"
           content="
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={bane}
         />
         <Accordion
           title="Bane"
@@ -183,12 +323,23 @@ function Villains(props) {
       <h3></h3>
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+
         <h3>Henchmen</h3>
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={firefly}
+        />
         <Accordion
           title="Firefly"
           content="
     <h3></h3>
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={madHatter}
         />
         <Accordion
           title="Mad Hatter"
@@ -196,11 +347,21 @@ function Villains(props) {
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={killerMoth}
+        />
         <Accordion
           title="Killer Moth"
           content="
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={ventriloquist}
         />
         <Accordion
           title="The Ventriloquist and Scarface"
@@ -208,11 +369,21 @@ function Villains(props) {
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={greatWhiteShark}
+        />
         <Accordion
           title="Great White Shark"
           content="
       <h3></h3>
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={deadshot}
         />
         <Accordion
           title="Deadshot"
@@ -220,11 +391,21 @@ function Villains(props) {
     <h3></h3>
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={azrael}
+        />
         <Accordion
           title="Azrael"
           content="
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={hush}
         />
         <Accordion
           title="Hush"
@@ -233,11 +414,21 @@ function Villains(props) {
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
         <h3>Thugs</h3>
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={victor}
+        />
         <Accordion
           title="Victor Zsasz"
           content="
         <h3></h3>
         <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={anarky}
         />
         <Accordion
           title="Anarky"
@@ -245,11 +436,21 @@ function Villains(props) {
       <h3></h3>
       <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={humptydumpty}
+        />
         <Accordion
           title="Humpty Dumpty"
           content="
     <h3></h3>
     <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={rat}
         />
         <Accordion
           title="Ratcatcher"
@@ -257,11 +458,21 @@ function Villains(props) {
   <h3></h3>
   <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
         />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={tweedle}
+        />
         <Accordion
           title="Tweedle-Dee and Tweedle-Dum"
           content="
           <h3></h3>
           <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>"
+        />
+        <img
+          className="villain-pic"
+          style={{ width: "30px;", height: "30px;" }}
+          src={professorPyg}
         />
         <Accordion
           title="Professor Pyg"

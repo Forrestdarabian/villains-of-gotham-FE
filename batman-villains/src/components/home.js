@@ -84,12 +84,9 @@ function Home(props) {
           <h3>What is this website?</h3>
           <p className="about">
             This App allows you to create a squad of villains to face-off The
-            Batman!
-            <br />
-            After you pick your villains you will get a percentage of how likely
-            they'll be
-            <br /> to defeat The Dark Knight! Follow the tabs to the left to get
-            started!
+            Batman! After you pick your villains you will get a percentage of
+            how likely they'll be to defeat The Dark Knight! Follow the tabs to
+            the left to get started!
           </p>
         </div>
         <br />{" "}
@@ -147,4 +144,4 @@ const mapStateToProps = (state) => {
     logInUser: state.logInUser,
   };
 };
-export default Home;
+export default connect(mapStateToProps, { logOut: logOut })(Home);

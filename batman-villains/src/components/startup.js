@@ -14,6 +14,7 @@ function Startup(props) {
         <h1>Villains of Gotham</h1>
       </header>
       <div className="Home">
+        <h3>Welcome! Click the button below to get started...</h3>
         <NavLink to="/home">
           <button>Enter if you dare...</button>
         </NavLink>

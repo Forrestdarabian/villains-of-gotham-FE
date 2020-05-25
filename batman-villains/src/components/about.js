@@ -53,15 +53,13 @@ function About(props) {
           <h3>Our Story</h3>
           <p className="about">
             Inspired by all the crazy villains that have tormented Batman
-            throughout the years, <br /> (especially in the Arkham series) I was
-            inspired to make a website that lists them all off! <br /> I then
-            realized that an index of Batman villains obviously already exists
-            in a bunch
-            <br /> of other places online, so I have implemented the "Create a
-            Squad" feature
-            <br /> where the user can pick villains to assemble a squad that
-            shows the likelihood <br /> of them defeating Batman! Follow the
-            tabs to the left to get started!
+            throughout the years, (especially in the Arkham series) I was
+            inspired to make a website that lists them all off! I then realized
+            that an index of Batman villains obviously already exists in a bunch
+            of other places online, so I have implemented the "Create a Squad"
+            feature where the user can pick villains to assemble a squad that
+            shows the likelihood of them defeating Batman! Follow the tabs to
+            the left to get started!
           </p>
         </div>
         <br />{" "}

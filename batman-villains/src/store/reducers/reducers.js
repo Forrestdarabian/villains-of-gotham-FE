@@ -21,9 +21,6 @@ import {
   DELETE_SQUAD_FAILURE,
   EDIT_SUCCESS,
   EDIT_FAILURE,
-  BORROW_START,
-  BORROW_ITEM_SUCCESS,
-  BORROW_ERROR,
 } from "../actions/actions";
 // REGISTRATION
 export const reducer = (state = initialState, action) => {

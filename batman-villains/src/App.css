@@ -3,6 +3,18 @@
   margin-left: 200px;
 }
 
+@media (max-width: 725px) {
+  .App {
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 490px) {
+  .App {
+    margin-left: 100px;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

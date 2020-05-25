@@ -53,9 +53,6 @@ div.startup {
   background-size: 50%;
 }
 
-div.startup footer {
-}
-
 .startup button {
   padding: 6px 6px 6px;
   text-decoration: none;
@@ -73,11 +70,126 @@ button {
   margin: 10px;
 }
 
-footer {
-  background-color: #111;
-  margin-left: 33%;
-  margin-right: 33%;
-  border-radius: 20px;
-  padding-bottom: 15px;
-  padding-top: 1px;
+@media (min-width: 725px) {
+  footer {
+    background-color: #111;
+    margin-left: 33%;
+    margin-right: 33%;
+    border-radius: 20px;
+    padding-bottom: 15px;
+    padding-top: 1px;
+  }
 }
+
+@media (max-width: 490px) {
+  footer {
+    font-size: small;
+  }
+}
+
+@media (max-width: 490px) {
+  p {
+    font-size: small;
+  }
+}
+
+@media (max-width: 490px) {
+  h3 {
+    font-size: small;
+  }
+}
+
+/* .villain-pics {
+  width: 40%;
+} */
+/* .shark {
+  width: 40%;
+}
+
+.pig {
+  width: 40%;
+}
+
+.ventriloquist {
+  width: 40%;
+}
+
+.anarky {
+  width: 45%;
+}
+
+.fly {
+  width: 45%;
+}
+
+.rat {
+  width: 45%;
+}
+
+.azrael {
+  width: 45%;
+}
+
+.hat {
+  width: 45%;
+}
+
+.solomon {
+  width: 45%;
+}
+
+.prometheus {
+  width: 45%;
+}
+
+.riddler {
+  width: 45%;
+} */
+
+.villain-pic {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@media (max-width: 725px) {
+  .villain-pic {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 490px) {
+  .villain-pic {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 725px) {
+  .sidenav {
+    width: 150px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 490px) {
+  .sidenav {
+    width: 100px;
+  }
+  .sidenav .a {
+    font-size: 15px;
+  }
+  .sidenav h1 {
+    font-size: 15px;
+  }
+}
+
+/* height: 100%;
+width: 200px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+padding-top: 20px; */

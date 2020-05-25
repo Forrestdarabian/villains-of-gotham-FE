@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { logOut } from "../store/actions/actions";
 import Accordion from "../functionality/accordion";
 import logo from "../icons/home.jpg";
 import "../App.css";
+import Card from "./card-view";
 
-function Squads(props) {
+import { logOut, fetchSquad, deleteSquad } from "../store/actions/actions";
+
+const Squads = (props) => {
   const { touched, errors, logInUser, history, token } = props;
+
+  if (!token) {
+    props.history.push("/login/");
+  }
+  useEffect(() => {
+    props.fetchSquad();
+  }, []);
+
   return (
     <div className="startup">
       <header className="Home-header">
@@ -15,8 +26,21 @@ function Squads(props) {
       </header>
       <div className="Home">
         <NavLink to="/home">
-          <button>Enter if you dare...</button>
+          <button>Back to Home</button>
         </NavLink>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          alignContent: "center",
+          flexDirection: "column",
+          width: "100%",
+        }}
+      >
+        {props.itemData.map((item) => {
+          return <Card item={item} history={history} />;
+        })}{" "}
       </div>
       <br />
       <br />
@@ -79,6 +103,15 @@ function Squads(props) {
       <br />
     </div>
   );
-}
+};
 
-export default Squads;
+const mapStateToProps = (state) => {
+  console.log("THIS IS MSTP STATE IN LOGIN", state);
+  return {
+    itemData: state.itemData,
+    error: state.error,
+    token: state.token,
+  };
+};
+
+export default connect(mapStateToProps, { fetchSquad })(Squads);

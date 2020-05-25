@@ -14,7 +14,11 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     password: "",
   });
 
-  // useEffect(() => {}, [history, token]);
+  useEffect(() => {
+    if (token) {
+      history.push("/create");
+    }
+  }, [token]);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -24,10 +28,6 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     e.preventDefault();
     if (user.username && user.password) {
       logInUser(user);
-      // setUser({ username: "", password: "" });
-      if (token) {
-        history.push("/create");
-      }
     }
   };
 
@@ -69,10 +69,11 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
           Don't Have An Account? Click
           <a href="/register"> Here</a> To Register!
         </h3>
-        <img width="25%" src={logo} />
+        <img width="50%" src={logo} />
         <br />
         <br />
         <Label for="username">Username: </Label>
+        <br />
         <Field
           className="form-control"
           type="text"
@@ -85,6 +86,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
         )}{" "}
         <br /> <br />
         <Label for="password">Password: </Label>
+        <br />
         <Field
           className="form-control"
           type="password"
