@@ -23,11 +23,11 @@ const Create = ({
   }
 
   const [squadItem, setSquadItem] = useState({
-    boss: "",
-    secondInCommand: "",
-    brute: "",
-    henchman: "",
-    thug: "",
+    boss: "Hugo Strange",
+    secondInCommand: "The Riddler",
+    brute: "Man-Bat",
+    henchman: "Firefly",
+    thug: "Victor Zsasz",
   });
 
   const [selectedCategory, setCategory] = useState("The Joker");
@@ -58,7 +58,7 @@ const Create = ({
     "Man-Bat": [],
     "Killer Croc": [],
     "Solomon Grundy": [],
-    Clyaface: [],
+    Clayface: [],
     Bane: [],
   };
 
