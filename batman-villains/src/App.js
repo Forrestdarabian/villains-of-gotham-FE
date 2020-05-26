@@ -8,7 +8,7 @@ import Startup from "./components/startup";
 import Register from "./components/register";
 import Login from "./components/login";
 import Squads from "./components/squads";
-
+import Edit from "./components/edit-squad";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route path="/squads" component={Squads} />
+        <Route path="/edit-squad" component={Edit} />
       </Switch>
     </div>
   );

@@ -77,6 +77,10 @@ h1.MuiTypography-root {
   color: #f1f1f1;
 }
 
+.MuiIconButton-root:hover {
+  color: green;
+}
+
 .top-h1 {
   padding-top: 20px;
 }
@@ -107,6 +111,10 @@ header.Home-header {
   font-family: "Exo", sans-serif;
 }
 
+.startup button:hover {
+  color: green;
+}
+
 p {
   margin-left: 5px;
   margin-right: 5px;
@@ -120,6 +128,14 @@ h1 {
 h3 {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+input {
+  font-family: "Exo", sans-serif;
+}
+
+select {
+  font-family: "Exo", sans-serif;
 }
 
 .posted-squads {

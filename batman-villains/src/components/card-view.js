@@ -80,7 +80,23 @@ export default function CardView({ item, handleDelete, history }) {
           Thug: {item.thug}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing></CardActions>
+      <CardActions disableSpacing>
+        <IconButton>
+          <a
+            className="icon-edit"
+            onClick={() => history.push("edit-squad", { carddata: item })}
+          >
+            <EditIcon type="edit" key="edit" />
+          </a>
+        </IconButton>
+        <IconButton
+          className={classes.expand}
+          onClick={() => handleDelete(item.id)}
+          aria-label="show-more"
+        >
+          <DeleteIcon />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 }

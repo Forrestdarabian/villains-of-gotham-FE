@@ -20,6 +20,12 @@ const Squads = (props) => {
     props.fetchSquad();
   }, []);
 
+  const handleDelete = (id) => {
+    console.log("deleted" + id);
+
+    props.deleteSquad(id);
+  };
+
   return (
     <div className="startup">
       <header className="Home-header">
@@ -76,7 +82,9 @@ const Squads = (props) => {
           }}
         >
           {props.itemData.map((item) => {
-            return <Card item={item} history={history} />;
+            return (
+              <Card item={item} handleDelete={handleDelete} history={history} />
+            );
           })}{" "}
         </div>
       </div>
@@ -153,4 +161,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchSquad })(Squads);
+export default connect(mapStateToProps, { fetchSquad, deleteSquad })(Squads);
