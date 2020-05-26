@@ -23,14 +23,14 @@ const Create = ({
   }
 
   const [squadItem, setSquadItem] = useState({
-    boss: "The Joker",
-    secondInCommand: "Harley Quinn",
-    brute: "Bane",
-    henchman: "Firefly",
-    thug: "Anarky",
+    boss: "",
+    secondInCommand: "",
+    brute: "",
+    henchman: "",
+    thug: "",
   });
 
-  // const [selectedCategory, setCategory] = useState("The Joker");
+  const [selectedCategory, setCategory] = useState("The Joker");
 
   // const CategoryMapping = {
   //   Bosses: [
@@ -42,16 +42,42 @@ const Create = ({
   //     "Two-Face",
   //     "Black Mask",
   //   ],
-  //   Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
-  //   TV: ["Comedy", "Drama", "Cartoon"],
-  //   Games: ["90's", "2000's", "2010's"],
-  //   Animals: ["Land", "Sea", "Air"],
-  //   Holidays: ["Holidays"],
-  //   Consoles: ["SEGA", "Nintendo", "Playstation"],
+
+  //   secondInCommand: [
+  //     "The Riddler",
+  //     "Poison Ivy",
+  //     "Harley Quinn",
+  //     "Scarecrow",
+  //     "Deathstroke",
+  //     "Cat Woman",
+  //     "Calendar Man",
+  //     "Talia Al Ghul",
+  //     "Prometheus",
+  //   ],
+  //   brutes: ["Man-Bat", "Killer Croc", "Solomon Grundy", "Clyaface", "Bane"],
+
+  //   henchmen: [
+  //     "Firefly",
+  //     "Mad Hatter",
+  //     "Killer Moth",
+  //     "The Ventriloquist and Scarface",
+  //     "Great White Shark",
+  //     "Deadshot",
+  //     "Azrael",
+  //     "Hush",
+  //   ],
+  //   thugs: [
+  //     "Victor Zsasz",
+  //     "Anarky",
+  //     "Humpty Dumpty",
+  //     "Ratcatcher",
+  //     "Tweedledee & Tweedledum",
+  //     "Professor Pyg",
+  //   ],
   // };
 
   // const handleChanges = (e) => {
-  //   if (e.currentTarget.id == "category") {
+  //   if (e.currentTarget.id == "bosses") {
   //     setCategory(e.target.value);
   //     let currentSquadItem = squadItem;
   //     squadItem.category = e.target.value;

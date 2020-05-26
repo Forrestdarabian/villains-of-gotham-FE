@@ -15,7 +15,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import ShareIcon from "@material-ui/icons/Share";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import logo from "../icons/about.jpg";
+import logo from "../icons/squads.jpg";
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,24 +45,32 @@ export default function CardView({ item, handleDelete, history }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{ margin: "20px", width: "300px" }}>
+    <Card
+      className={classes.root}
+      style={{
+        margin: "20px",
+        width: "300px",
+        backgroundColor: "#111",
+        color: "white",
+      }}
+    >
       <CardHeader title="Villains List" />
       <CardMedia className={classes.media} image={logo} />
       <CardContent>
-        <Typography variant="body1" color="textPrimary" component="h1">
+        <Typography variant="body1" color="white" component="h1">
           Boss: {item.boss}
         </Typography>
-        <Typography variant="body1" color="textPrimary" component="h1">
+        <Typography variant="body1" color="white" component="h1">
           Second in Command: {item.secondInCommand}
         </Typography>
-        <Typography variant="body1" color="textPrimary" component="h1">
-          Brute: {item.secondInCommand}
+        <Typography variant="body1" color="white" component="h1">
+          Brute: {item.brute}
         </Typography>
-        <Typography variant="body1" color="textPrimary" component="h1">
-          Henchman: {item.secondInCommand}
+        <Typography variant="body1" color="white" component="h1">
+          Henchman: {item.henchman}
         </Typography>
-        <Typography variant="body1" color="textPrimary" component="h1">
-          Thug: {item.secondInCommand}
+        <Typography variant="body1" color="white" component="h1">
+          Thug: {item.thug}
         </Typography>
       </CardContent>
       <CardActions disableSpacing></CardActions>

@@ -47,18 +47,54 @@ img {
   border-color: rgb(255, 0, 0);
 }
 div.startup {
-  margin-left: -200px;
   background-image: url("./icons/villains.jpg");
   background-repeat: repeat;
   background-size: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+header.Home-header {
+  text-align: center;
+  background-color: black;
 }
 
 .startup button {
-  padding: 6px 6px 6px;
+  padding: 20px 20px 20px;
   text-decoration: none;
-  color: white;
-  border-radius: 20px;
+  color: black;
+  border-radius: 0px;
+  background-color: white;
+  font-family: "Exo", sans-serif;
+}
+
+p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+h1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+h3 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.posted-squads {
   background-color: #111;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 20px;
+}
+
+@media (max-width: 949px) {
+  .posted-squads {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 button {
@@ -68,6 +104,8 @@ button {
   border-radius: 20px;
   background-color: #111;
   margin: 10px;
+  font-family: "Exo", sans-serif;
+  font-weight: bold;
 }
 
 @media (min-width: 725px) {
@@ -98,53 +136,6 @@ button {
     font-size: small;
   }
 }
-
-/* .villain-pics {
-  width: 40%;
-} */
-/* .shark {
-  width: 40%;
-}
-
-.pig {
-  width: 40%;
-}
-
-.ventriloquist {
-  width: 40%;
-}
-
-.anarky {
-  width: 45%;
-}
-
-.fly {
-  width: 45%;
-}
-
-.rat {
-  width: 45%;
-}
-
-.azrael {
-  width: 45%;
-}
-
-.hat {
-  width: 45%;
-}
-
-.solomon {
-  width: 45%;
-}
-
-.prometheus {
-  width: 45%;
-}
-
-.riddler {
-  width: 45%;
-} */
 
 .villain-pic {
   max-width: 300px;

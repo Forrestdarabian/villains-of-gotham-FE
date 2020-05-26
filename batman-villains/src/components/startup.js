@@ -11,11 +11,43 @@ function Startup(props) {
   return (
     <div className="startup">
       <header className="Home-header">
-        <h1>Villains of Gotham</h1>
+        <div id="mySidenav" class="sidenav">
+          <h1>Villains of Gotham</h1>
+          <NavLink className="a" to="/home">
+            Home
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/villains">
+            Villains
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/register">
+            Register
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/login">
+            Login
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/create">
+            Create
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/squads">
+            Squads
+          </NavLink>
+          <br />
+          <NavLink className="a" to="/about">
+            About
+          </NavLink>
+        </div>
       </header>
-      <div className="Home">
-        <h3>Welcome! Click the button below to get started...</h3>
+      <div className="startup-home">
         <NavLink to="/home">
+          <br />
+          <br />
+          <br />
+          <br />
           <button>Enter if you dare...</button>
         </NavLink>
       </div>
@@ -47,36 +79,35 @@ function Startup(props) {
       <br />
       <br />
       <br />
-      <footer class="footer pt-80 pt-xs-60">
-        <div class="footer-container">
-          <h1>Villains of Gotham</h1>
-          <div class="copyright">
-            <p>
-              © 2020
-              <a>
-                <b> Forrest Darabian </b>
-              </a>
-            </p>
-          </div>
-          <div class="left">
-            <h4 class="something">Contact / Links</h4>
-            <li>
-              {" "}
-              <a href="mailto:forrestdarabian@gmail.com">
-                <i class="ion-ios-email fa-icons"></i>
-                Contact Me
-              </a>{" "}
-            </li>
-            <li>
-              <a href="https://www.forrestdarabian.com/">
-                <i class="fa-angle-double-right"></i>Developers Site
-              </a>
-            </li>
-          </div>
-          <br />
-          Batman is a property of Warner Bros & DC Comics.
-        </div>
-      </footer>{" "}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <br />
     </div>
   );
