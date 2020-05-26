@@ -95,7 +95,12 @@ const Register = (props) => {
         <div className="form-group">
           <label>Username: </label>
           <br />
-          <input type="text" className="form-control" placeholder=" Username" />
+          <input
+            autocapitalize="off"
+            type="text"
+            className="form-control"
+            placeholder=" Username"
+          />
         </div>
         <br />
 

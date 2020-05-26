@@ -13,6 +13,41 @@ code {
     monospace;
 }
 
+span.MuiTypography-h5 {
+  font-family: "Exo", sans-serif;
+}
+
+h1.MuiTypography-root {
+  font-family: "Exo", sans-serif;
+}
+
+#hideMe {
+  -moz-animation: cssAnimation 0s ease-in 10s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 10s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 10s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 10s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  border-style: none;
+}
+@keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
 /* The sidenav */
 .sidenav {
   height: 100%;
@@ -24,6 +59,10 @@ code {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+}
+
+.card-stuff {
+  font-family: "Exo", sans-serif;
 }
 
 .sidenav .a {
@@ -88,6 +127,7 @@ h3 {
   margin-left: 30%;
   margin-right: 30%;
   padding: 20px;
+  border-radius: 20px;
 }
 
 @media (max-width: 949px) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -17,6 +17,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logo from "../icons/squads.jpg";
 import { NavLink } from "react-router-dom";
+import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,7 +58,13 @@ export default function CardView({ item, handleDelete, history }) {
       <CardHeader title="Villains List" />
       <CardMedia className={classes.media} image={logo} />
       <CardContent>
-        <Typography variant="body1" color="white" component="h1">
+        <Typography
+          className="card-stuff"
+          variant="body1"
+          fontFamily='Exo", sans-serif'
+          color="white"
+          component="h1"
+        >
           Boss: {item.boss}
         </Typography>
         <Typography variant="body1" color="white" component="h1">

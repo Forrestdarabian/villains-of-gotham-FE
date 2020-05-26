@@ -32,61 +32,67 @@ const Create = ({
 
   const [selectedCategory, setCategory] = useState("The Joker");
 
-  // const CategoryMapping = {
-  //   Bosses: [
-  //     "Hugo Strange",
-  //     "The Penguin",
-  //     "Ra's al Ghul",
-  //     "Mr. Freeze",
-  //     "The Joker",
-  //     "Two-Face",
-  //     "Black Mask",
-  //   ],
+  const BossMapping = {
+    "Hugo Strange": [],
+    "The Penguin": [],
+    "Ra's al Ghul": [],
+    "Mr. Freeze": [],
+    "The Joker": [],
+    "Two-Face": [],
+    "Black Mask": [],
+  };
 
-  //   secondInCommand: [
-  //     "The Riddler",
-  //     "Poison Ivy",
-  //     "Harley Quinn",
-  //     "Scarecrow",
-  //     "Deathstroke",
-  //     "Cat Woman",
-  //     "Calendar Man",
-  //     "Talia Al Ghul",
-  //     "Prometheus",
-  //   ],
-  //   brutes: ["Man-Bat", "Killer Croc", "Solomon Grundy", "Clyaface", "Bane"],
+  const SecondInCommandMapping = {
+    "The Riddler": [],
+    "Poison Ivy": [],
+    "Harley Quinn": [],
+    Scarecrow: [],
+    Deathstroke: [],
+    "Cat Woman": [],
+    "Calendar Man": [],
+    "Talia Al Ghul": [],
+    Prometheus: [],
+  };
 
-  //   henchmen: [
-  //     "Firefly",
-  //     "Mad Hatter",
-  //     "Killer Moth",
-  //     "The Ventriloquist and Scarface",
-  //     "Great White Shark",
-  //     "Deadshot",
-  //     "Azrael",
-  //     "Hush",
-  //   ],
-  //   thugs: [
-  //     "Victor Zsasz",
-  //     "Anarky",
-  //     "Humpty Dumpty",
-  //     "Ratcatcher",
-  //     "Tweedledee & Tweedledum",
-  //     "Professor Pyg",
-  //   ],
-  // };
+  const BruteMapping = {
+    "Man-Bat": [],
+    "Killer Croc": [],
+    "Solomon Grundy": [],
+    Clyaface: [],
+    Bane: [],
+  };
 
-  // const handleChanges = (e) => {
-  //   if (e.currentTarget.id == "bosses") {
-  //     setCategory(e.target.value);
-  //     let currentSquadItem = squadItem;
-  //     squadItem.category = e.target.value;
-  //     squadItem.subcategory = CategoryMapping[e.target.value][0];
+  const HenchmenMapping = {
+    Firefly: [],
+    "Mad Hatter": [],
+    "Killer Moth": [],
+    "The Ventriloquist and Scarface": [],
+    "Great White Shark": [],
+    Deadshot: [],
+    Azrael: [],
+    Hush: [],
+  };
 
-  //     setSquadItem();
-  //   }
-  //   setSquadItem({ ...squadItem, [e.target.name]: e.target.value });
-  // };
+  const ThugMapping = {
+    "Victor Zsasz": [],
+    Anarky: [],
+    "Humpty Dumpty": [],
+    Ratcatcher: [],
+    "Tweedledee & Tweedledum": [],
+    "Professor Pyg": [],
+  };
+
+  const handleChanges = (e) => {
+    // if (e.currentTarget.id == "bosses") {
+    //   setCategory(e.target.value);
+    //   let currentSquadItem = squadItem;
+    //   squadItem.category = e.target.value;
+    //   squadItem.subcategory = CategoryMapping[e.target.value][0];
+
+    setSquadItem();
+
+    setSquadItem({ ...squadItem, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -147,20 +153,12 @@ const Create = ({
               name="boss"
               placeholder="Pick a Boss"
               value={boss}
-              // onChange={handleChanges}
+              onChange={handleChanges}
               required
             >
-              <option>Hugo Strange</option>
-              <option>The Penguin</option>
-              <option>Ra's al Ghul</option>
-              <option>Mr. Freeze</option>
-              <option>The Joker</option>
-              <option>Two-Face</option>
-              <option>Black Mask</option>
-
-              {/* {Object.keys(CategoryMapping).map((item) => {
+              {Object.keys(BossMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
           <br />
@@ -174,22 +172,12 @@ const Create = ({
               name="secondInCommand"
               placeholder="Choose a Second in Command"
               value={secondInCommand}
-              // onChange={handleChanges}
+              onChange={handleChanges}
               required
             >
-              <option>The Riddler</option>
-              <option>Poison Ivy</option>
-              <option>Harley Quinn</option>
-              <option>Scarecrow</option>
-              <option>Deathstroke</option>
-              <option>Catwoman</option>
-              <option>Calendar Man</option>
-              <option>Talia al Ghul</option>
-              <option>Prometheus</option>
-
-              {/* {CategoryMapping[selectedCategory].map((item) => {
+              {Object.keys(SecondInCommandMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
           <br />
@@ -203,18 +191,12 @@ const Create = ({
               name="brute"
               placeholder="Choose a Brute"
               value={brute}
-              // onChange={handleChanges}
+              onChange={handleChanges}
               required
             >
-              {" "}
-              <option>Man-Bat</option>
-              <option>Killer Croc</option>
-              <option>Solomon Grundy</option>
-              <option>Clayface</option>
-              <option>Bane</option>
-              {/* {CategoryMapping[selectedCategory].map((item) => {
+              {Object.keys(BruteMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
           <br />
@@ -228,21 +210,12 @@ const Create = ({
               name="henchman"
               placeholder="Choose a Henchman"
               value={henchman}
-              // onChange={handleChanges}
+              onChange={handleChanges}
               required
             >
-              <option>Firefly</option>
-              <option>Mad Hatter</option>
-              <option>Killer Moth</option>
-              <option>The Ventriloquist & Scarface</option>
-              <option>Great White Shark</option>
-              <option>Deadshot</option>
-              <option>Azrael</option>
-              <option>Hush</option>
-
-              {/* {CategoryMapping[selectedCategory].map((item) => {
+              {Object.keys(HenchmenMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
           <br />
@@ -256,19 +229,12 @@ const Create = ({
               name="thug"
               placeholder="Choose a Thug"
               value={thug}
-              // onChange={handleChanges}
+              onChange={handleChanges}
               required
             >
-              <option>Victor Zsasz</option>
-              <option>Anarky</option>
-              <option>Humpty Dumpty</option>
-              <option>Ratcatcher</option>
-              <option>Tweedle-Dee & Tweedle-Dum</option>
-              <option>Professor Pyg</option>
-
-              {/* {CategoryMapping[selectedCategory].map((item) => {
+              {Object.keys(ThugMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
 

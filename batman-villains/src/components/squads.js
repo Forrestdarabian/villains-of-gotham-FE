@@ -6,6 +6,7 @@ import Accordion from "../functionality/accordion";
 import logo from "../icons/home.jpg";
 import "../App.css";
 import Card from "./card-view";
+import loading from "../icons/giphy.gif";
 
 import { logOut, fetchSquad, deleteSquad } from "../store/actions/actions";
 
@@ -53,21 +54,18 @@ const Squads = (props) => {
           </NavLink>
         </div>
       </header>
+      <br />
+      <br />
       <div className="startup-home">
-        <NavLink to="/home">
-          <br />
-          <br />
-          <br />
-          <br />
-          <button>Back to Home</button>
-        </NavLink>
+        <NavLink to="/home"></NavLink>
         <div className="posted-squads">
-          <h1>Posted Squads</h1>
-          <h3>
+          <h3>Posted Squads</h3>
+          <h5>
             Below are user submitted Squads. If you recently made a Squad <br />{" "}
             you will find it at the bottom.
-          </h3>
+          </h5>
         </div>
+        <br /> <br />
         <div
           style={{
             display: "flex",
@@ -82,6 +80,8 @@ const Squads = (props) => {
           })}{" "}
         </div>
       </div>
+      <img src={loading} width="50px" id="hideMe" alt="loading" />
+
       <br />
       <br />
       <br />
