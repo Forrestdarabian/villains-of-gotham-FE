@@ -5,6 +5,8 @@ import { logOut, addSquads } from "../store/actions/actions";
 import logo from "../icons/create.jpeg";
 import "../App.css";
 
+let userName = localStorage.getItem("username");
+
 const Create = ({
   touched,
   errors,
@@ -17,6 +19,7 @@ const Create = ({
   brute,
   henchman,
   thug,
+  username,
 }) => {
   if (!token) {
     history.push(`/login/`);
@@ -28,6 +31,7 @@ const Create = ({
     brute: "Man-Bat",
     henchman: "Firefly",
     thug: "Victor Zsasz",
+    username: `${userName}`,
   });
 
   const [selectedCategory, setCategory] = useState("The Joker");
@@ -237,8 +241,24 @@ const Create = ({
               })}
             </select>
           </div>
-
           <br />
+          <div className="form-group">
+            <label>Your Name: </label>
+            <br />
+            <input
+              className="form-control"
+              id="username"
+              type="text"
+              name="username"
+              maxLength={200}
+              placeholder="Enter your name"
+              value={username}
+              onChange={handleChanges}
+              required
+            />
+          </div>
+          <br />
+
           <button type="submit" className="home">
             Submit
           </button>

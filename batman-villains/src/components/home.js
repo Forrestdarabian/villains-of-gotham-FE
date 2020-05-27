@@ -8,6 +8,7 @@ import "../App.css";
 
 function Home(props) {
   const { touched, errors, logInUser, history, token } = props;
+  let userName = localStorage.getItem("username");
   return (
     <div className="home-container">
       <header className="Home-header">
@@ -45,7 +46,10 @@ function Home(props) {
       <div className="Home">
         <div className="text-section">
           <h1 className="top-h1">Home</h1>
-          <h3>Welcome Home! Create an Account or Login Below!</h3>
+          <h3>
+            Welcome Home{userName ? `, ${userName}` : ""}! Create an Account or
+            Login Below!
+          </h3>
           {token ? (
             <div>
               <NavLink to="/create">

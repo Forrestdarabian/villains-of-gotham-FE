@@ -115,6 +115,15 @@ header.Home-header {
   color: green;
 }
 
+button.MuiButtonBase-root {
+  background-color: #111;
+  color: white;
+}
+
+button.chances {
+  padding: 5px;
+}
+
 p {
   margin-left: 5px;
   margin-right: 5px;
@@ -128,6 +137,10 @@ h1 {
 h3 {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+alert {
+  display: none;
 }
 
 input {

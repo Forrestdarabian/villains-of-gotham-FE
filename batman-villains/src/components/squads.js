@@ -7,6 +7,7 @@ import logo from "../icons/home.jpg";
 import "../App.css";
 import Card from "./card-view";
 import loading from "../icons/giphy.gif";
+import Random from "../functionality/random";
 
 import { logOut, fetchSquad, deleteSquad } from "../store/actions/actions";
 
@@ -65,10 +66,10 @@ const Squads = (props) => {
       <div className="startup-home">
         <NavLink to="/home"></NavLink>
         <div className="posted-squads">
-          <h3>Posted Squads</h3>
+          <h2>Posted Squads</h2>
           <h5>
-            Below are user submitted Squads. If you recently made a Squad <br />{" "}
-            you will find it at the bottom.
+            Below are user submitted Squads. If you recently made a Squad you
+            will find it at the bottom.
           </h5>
         </div>
         <br /> <br />
@@ -83,7 +84,14 @@ const Squads = (props) => {
         >
           {props.itemData.map((item) => {
             return (
-              <Card item={item} handleDelete={handleDelete} history={history} />
+              <div>
+                <alert id="demo"></alert>
+                <Card
+                  item={item}
+                  handleDelete={handleDelete}
+                  history={history}
+                />
+              </div>
             );
           })}{" "}
         </div>

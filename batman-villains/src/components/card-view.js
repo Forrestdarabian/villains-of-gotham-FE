@@ -18,6 +18,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logo from "../icons/squads.jpg";
 import { NavLink } from "react-router-dom";
 import "../App.css";
+import Random from "../functionality/random";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CardView({ item, handleDelete, history }) {
   const classes = useStyles();
-
+  let userName = localStorage.getItem("username");
   return (
     <Card
       className={classes.root}
@@ -55,7 +56,8 @@ export default function CardView({ item, handleDelete, history }) {
         color: "white",
       }}
     >
-      <CardHeader title="Villains List" />
+      <h2>{item.username}'s Villain Squad</h2>
+
       <CardMedia className={classes.media} image={logo} />
       <CardContent>
         <Typography
@@ -89,6 +91,8 @@ export default function CardView({ item, handleDelete, history }) {
             <EditIcon type="edit" key="edit" />
           </a>
         </IconButton>
+        {/* <button onClick={() => getRandom()}>Chance Of Beating Batman</button> */}
+        <Random />
         <IconButton
           className={classes.expand}
           onClick={() => handleDelete(item.id)}

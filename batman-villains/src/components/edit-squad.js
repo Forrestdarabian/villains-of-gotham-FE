@@ -18,6 +18,7 @@ const Edit = (props) => {
     brute: cardData.brute,
     henchman: cardData.henchman,
     thug: cardData.thug,
+    username: cardData.username,
   };
 
   const BossMapping = {
@@ -220,6 +221,24 @@ const Edit = (props) => {
                 return <option value={item}> {item}</option>;
               })}
             </select>
+            <br />
+            <br />
+
+            <div className="form-group">
+              <label>Your Name: </label>
+              <br />
+              <input
+                className="form-control"
+                id="username"
+                type="text"
+                name="username"
+                maxLength={200}
+                placeholder="Enter your name"
+                value={editing.username}
+                onChange={handleChanges}
+                required
+              />
+            </div>
           </div>
 
           <br />
@@ -292,6 +311,7 @@ const Edit = (props) => {
 const mapStateToProps = (state) => {
   return {
     itemData: state.itemData,
+    username: state.username,
     changed: state.changed,
   };
 };
