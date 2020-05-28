@@ -59,7 +59,9 @@ function About(props) {
             of other places online, so I have implemented the "Create a Squad"
             feature where the user can pick villains to assemble a squad that
             shows the likelihood of them defeating Batman! Follow the tabs to
-            the left to get started!
+            the left to get started! (Please note that this App is for
+            entertainment purposes only. The creator does not make any profit
+            and is not affiliated with Warner Brothers or DC Comics)
           </p>
         </div>
         <br />{" "}
