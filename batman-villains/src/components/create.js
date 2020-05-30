@@ -278,28 +278,14 @@ const Create = ({
       </div>
       <footer class="footer pt-80 pt-xs-60">
         <div class="footer-container">
-          <h1>Total Top 5's</h1>
+          <h1>Villains of Gotham</h1>
           <div class="copyright">
             <p>
               © 2020
               <a>
                 <b> Forrest Darabian </b>
               </a>
-              All Rights Reserved.
             </p>
-          </div>
-          <div>
-            Icons made by{" "}
-            <a
-              href="https://www.flaticon.com/authors/smalllikeart"
-              title="smalllikeart"
-            >
-              smalllikeart
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
           </div>
           <div class="left">
             <h4 class="something">Contact / Links</h4>
@@ -316,6 +302,8 @@ const Create = ({
               </a>
             </li>
           </div>
+          <br />
+          Batman is a property of Warner Bros & DC Comics.
         </div>
       </footer>{" "}
       <br />
